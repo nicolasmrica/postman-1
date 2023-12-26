@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+- "20.10.0"
+
+install:
+- npm install newman
+
+script:
+- node_modules/.bin/newman run test/Regression\ testing.postman_collection.json -e test/DEV.postman_environment.json
